@@ -6,14 +6,7 @@ on:
 
 
 jobs:
-  test_pull_request:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: ls -la
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
+      - run: echo "🎉 The job was automasdsftically triggered by a ${{ github.event_name }} event."
